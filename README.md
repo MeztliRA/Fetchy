@@ -13,7 +13,7 @@ gcc src/main.c -o fetchy
 ```
 
 ## Screenshot
-![Screenshot](images/fetchy%20screenshot.png)
+![Screenshot](images/fetchy%20screenshot2.png)
 
 ## Contributing
 Feel free to open a pull request.

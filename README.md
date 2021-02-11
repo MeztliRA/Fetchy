@@ -15,5 +15,8 @@ gcc src/main.c -o fetchy
 ## Screenshot
 ![Screenshot](images/fetchy%20screenshot3.png)
 
+## OS compatibility
+Currently fetchy only work on linux.
+
 ## Contributing
 Feel free to open a pull request.

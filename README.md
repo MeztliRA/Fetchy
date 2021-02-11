@@ -1,6 +1,10 @@
 # Fetchy
 A system information fetcher written in C.
 
+<p align="center">
+  <img src="https://github.com/MeztliRA/Fetchy/blob/main/images/logo.png" alt="Fetchy logo"/>
+</p>
+
 ## Why use it?
 - Its blazing fast
 - Its written in C

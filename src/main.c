@@ -15,10 +15,11 @@ int main() {
 
     uname(&uname_data);
 
-    printf("hostname: %s\n", hostname);
-    printf("user: %s\n", user);
-    printf("os: %s %s\n", uname_data.sysname, uname_data.release);
-    printf("shell: %s\n", shell);
-    printf("desktop: %s\n", desktop);
-    printf("language: %s\n", language);
+    printf("    __");
+    printf("   hostname: %s\n", hostname);
+    printf("   |     user: %s\n", user);
+    printf("   |     os: %s %s\n", uname_data.sysname, uname_data.release);
+    printf("   |__   shell: %s\n", shell);
+    printf("   |     desktop: %s\n", desktop);
+    printf("   |     language: %s\n", language);
 }

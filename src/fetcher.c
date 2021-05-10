@@ -50,8 +50,11 @@ char * getOS(char request, char *variable) {
         case 's': 
             variable = unameData.sysname;
             return variable;
-        case 'r': ;
+        case 'r':
             variable = unameData.release;
+            return variable;
+        case 'a':
+            variable = unameData.machine;
             return variable;
     }
 }
@@ -66,6 +69,7 @@ char * getTerm() {
 void fetch() {
     char sysname[50];
     char release[50];
+    char architecture[50];
     char hostname[1024];
 
     printf("    __");
@@ -76,4 +80,5 @@ void fetch() {
     printf("   |     desktop: %s\n", getDesktop());
     printf("   |     language: %s\n", getLang());
     printf("         terminal: %s\n", getTerm());
+    printf("         architecture: %s\n", getOS('a', architecture));
 }

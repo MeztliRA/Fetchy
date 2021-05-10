@@ -10,10 +10,9 @@ A system information fetcher written in C.
 - Its written in C
 
 ## Compiling
-Example using gcc:
 ```
 cd Fetchy
-gcc src/main.c -o fetchy
+make
 ```
 
 ## Screenshot

@@ -7,6 +7,7 @@ char * getShell();
 char * getLang();
 char * getHostname(char *str);
 char * getOS(char request, char *variable);
+char * getTerm();
 void fetch();
 
 #endif

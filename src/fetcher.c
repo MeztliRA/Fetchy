@@ -6,10 +6,12 @@
 
 char * getDesktop() {
     if (getenv("XDG_CURRENT_DESKTOP") == NULL) {
+        if (getenv("DESKTOP_SESSION") == NULL) {
+            return "unknown";
+        }
         return getenv("DESKTOP_SESSION");
-    } else {
-        return getenv("XDG_CURRENT_DESKTOP");
     }
+    return getenv("XDG_CURRENT_DESKTOP");
 }
 
 char * getUser() {
@@ -45,6 +47,14 @@ char * getOS(char request, char *variable) {
     }
 }
 
+char * getTerm() {
+    if (getenv("TERM_PROGRAM") == NULL) {
+        return "unknown";
+    } else {
+        return getenv("TERM_PROGRAM");
+    }
+}
+
 void fetch() {
     char sysname[50];
     char release[50];
@@ -57,4 +67,5 @@ void fetch() {
     printf("   |__   shell: %s\n", getShell());
     printf("   |     desktop: %s\n", getDesktop());
     printf("   |     language: %s\n", getLang());
+    printf("         terminal: %s\n", getTerm());
 }

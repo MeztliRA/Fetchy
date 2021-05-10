@@ -15,14 +15,23 @@ char * getDesktop() {
 }
 
 char * getUser() {
+    if (getenv("USER") == NULL) {
+        return "unknown";
+    }
     return getenv("USER");
 }
 
 char * getShell() {
+    if (getenv("SHELL") == NULL) {
+        return "unknown";
+    }
     return getenv("SHELL");
 }
 
 char * getLang() {
+    if (getenv("LANG") == NULL) {
+        return "unknown";
+    }
     return getenv("LANG");
 }
 
@@ -50,9 +59,8 @@ char * getOS(char request, char *variable) {
 char * getTerm() {
     if (getenv("TERM_PROGRAM") == NULL) {
         return "unknown";
-    } else {
-        return getenv("TERM_PROGRAM");
     }
+    return getenv("TERM_PROGRAM");
 }
 
 void fetch() {

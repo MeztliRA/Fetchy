@@ -12,7 +12,7 @@ A system information fetcher written in C.
 ## Compiling
 ```
 cd Fetchy
-make
+make compile
 ```
 
 ## Screenshot

@@ -4,9 +4,11 @@
 #include <sys/utsname.h>
 
 char * get_desktop() {
-    char * desktop = getenv("XDG_CURRENT_DESKTOP");
-
-    return desktop;
+    if (getenv("XDG_CURRENT_DESKTOP") == NULL) {
+        return getenv("DESKTOP_SESSION");
+    } else {
+        return getenv("XDG_CURRENT_DESKTOP");
+    }
 }
 
 char * get_user() {

@@ -1,4 +1,5 @@
 OUTDIR = build
+BINDIR = bin
 
 $(OUTDIR)/main.o: src/fetcher.h src/main.c
 	@mkdir -p $(@D)
@@ -9,10 +10,10 @@ $(OUTDIR)/fetcher.o: src/fetcher.h src/fetcher.c
 	$(CC) -c src/fetcher.c -o $@
 
 link: src/fetcher.c src/main.c
-	@mkdir -p $(OUTDIR)/executable
-	$(CC) $(OUTDIR)/fetcher.o $(OUTDIR)/main.o -o $(OUTDIR)/executable/fetchy
+	@mkdir -p $(OUTDIR)/$(BINDIR)
+	$(CC) $(OUTDIR)/fetcher.o $(OUTDIR)/main.o -o $(OUTDIR)/$(BINDIR)/fetchy
 
-compile:
+build:
 	make $(OUTDIR)/fetcher.o && make $(OUTDIR)/main.o && make link
 
 clean:
